@@ -1,200 +1,213 @@
-body
-{
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+/* Main colors:
+    #3F51B5
+    #FF4081
+*/
 
-.content
-{
-    width: 1280px;
-    margin: 0 auto;
-}
-
-h1, h2, h3, h4, h5, h6
-{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 100;
-}
-
-/* Button styles */
-.btn
-{
-    padding: 5px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: #333;
-    margin: 5px;
-    display: inline-block;
-    touch-action: manipulation;
-    cursor: pointer;
-}
-
-.btn:hover
-{
-    border: 1px solid #aaa;
-    background-color: #eeeeee;
-}
-
-.btn:active
-{
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.25);
-}
-
-.btn-big
-{
-    font-size: 14pt;
-    padding: 5px 15px;
-}
-
-.btn-main
-{
-    border: 1px solid transparent;
-    background-color: #266bfa;
-    color: #fff;
-}
-
-.btn-main:hover
-{
-    border: 1px solid transparent;
-    background-color: #2362d9;
-}
-
-.btn-main:active
-{
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.5);
-}
-
-.btn-close
-{
-    background-color: transparent;
-    border: none;
-}
-
-.btn-close-right
-{
-    float: right;
-}
-
-/* End of button styles */
-
-/* Overlay styles */
-.overlay
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background-color: rgba(0,0,0,.8)
-}
-
-.overlay-content
-{
-    width: 512px;
-    margin: 0 auto;
-    margin-top: 100px;
-    padding: 25px;
-
-    border: 5px solid #333333;
-    border-radius: 25px;
-
-    background-color: #ffffff;
-}
-
-/* End of overlay styles */
-
-/* Flexbox */
-
-.flexcontainer
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    align-content: stretch;
-}
-
-.flexitem
-{
-    width: 250px;
-    background-color: #eee;
-    padding: 25px;
-    margin: 25px;
-    border-radius: 25px;
-}
-
-.flexitem h3
-{
-    font-size: 24pt;
-    margin: 5px;
-}
-
-.flexitem
-{
-    text-align: center;
-}
-/* End flexbox */
-
-
-/* Top navbar styles */
-.topbar
-{
-    background-color: #ffffff;
-    padding: 1px;
-    box-shadow: 0 0 10px 0 #777;
-
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-bottom: 35px;
-    clear: both;
-}
-
-.topbar:before,
-.topbar:after {
+/* Clearfix from Nicolas Gallagher*/
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before,
+.cf:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.topbar:after {
+.cf:after {
     clear: both;
 }
 
-.topbar ul
+
+html,body
+{
+    height: 100%;
+}
+
+#tab-contacts, #tab-contacts .page-content, #tab-contacts .page-content .mdl-grid, .contact-cell
+{
+    height: 100%;
+}
+
+/* Contact list component */
+.contact-list
 {
     list-style-type: none;
+    margin: 0;
     padding: 0;
+}
+
+.contact-list__entry
+{
+    margin: 0 0;
+    padding: 0 16px;
+    height: 72px;
+
+    cursor: pointer;
+}
+
+.contact-list__entry--active
+{
+    background-color: #3F51B5;
+    color: #fff;
+}
+
+.contact-list__image
+{
     float: left;
+    height: inherit;
+    margin-right: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.topbar ul li
+.contact-list__image > img
 {
-    display: inline;
-    margin-right: 30px;
+    height: 48px;
 }
 
-.topbar ul li:first-of-type
+.contact-list__image--round > img
 {
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
 
+.contact-list__main
+{
+    float:left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 72px;
+}
+
+.contact-list__name
+{
     font-weight: bold;
+    font-size: 16px;
 }
 
-.topbar ul li a
+.contact-list__additional
+{
+    float: right;
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 72px;
+}
+
+.contact-list__last-message
 {
     color: #777;
-    text-decoration: none;
+    font-size: 14px;
 }
 
-.topbar ul li a:hover
+.contact-list__entry--active .contact-list__last-message
 {
-    color: #000;
+    color: #dddddd;
 }
 
-.topbar-right
+.contact-list__entry:not(:last-child) > .contact-list__border-bottom-wrapper
 {
-    float:right;
-    margin-top: 7px;
+    border-bottom: 1px solid #ddd;
+    margin-left: 72px;
 }
- /* End of top navbar styles */
+
+.contact-cell
+{
+    position: relative;;
+}
+
+/* Text field margin wrapper to give the text field its margin without affecting the component */
+
+.textfield-margin-wrapper
+{
+    margin: 0 16px;
+}
+
+/* Overwriting the padding of the header. Original value: 80px. It is too much because the drawer and the drawer icon (hamburger) were removed */
+
+.mdl-layout__header-row
+{
+    padding-left: 40px;
+}
+
+/* Style for the history cards */
+.history-card
+{
+    width: 100%;
+}
+
+.history-card > .mdl-card__title
+{
+    color: #fff;
+    height: 180px;
+    text-shadow: 1px 1px 0 #333;
+}
+
+/* Chat view */
+#chat-view
+{
+    background: url("../img/bg.jpg") center / cover;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;*/
+    overflow: auto;
+}
+
+/* Message cards */
+.message-card
+{
+    min-height: 72px;
+    margin: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.message-card .mdl-card
+{
+    min-height: 72px;
+    height: auto;
+    width: auto;
+}
+
+.message-card .mdl-card__title
+{
+    padding: 8px 16px 4px 16px;
+}
+
+.message-card .mdl-card__title-text
+{
+    font-size: 16px;
+    color: #FF4081;
+    font-weight: bold;
+    margin: 0;
+}
+
+.message-card .mdl-card__supporting-text
+{
+    padding: 8px 16px;
+}
+
+.message-card__avatar
+{
+    min-height: 72px;
+
+    float: left;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    margin-right: 16px;
+
+}
+
+.message-card__avatar img
+{
+    height: 48px;
+    border-radius: 50%;
+}

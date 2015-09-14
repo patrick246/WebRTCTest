@@ -1,0 +1,21 @@
+{
+  "name": "Material Lite Test",
+  "version": "0.0.0",
+  "authors": [
+    "Patrick Hahn <patricksilashahn@gmx.net>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "https://patrick246.de",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "material-design-lite": "~1.0.4"
+  }
+}
