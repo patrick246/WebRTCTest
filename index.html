@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Material Design</title>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="bower_components/material-design-lite/material.css">
+    <script src="bower_components/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="http://localhost:35729/livereload.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        $(function () {
+            // Set all card backgrounds from attributes
+            $('.mdl-card[data-background] > .mdl-card__title').each(function () {
+                $(this).css({background: 'url("'+ $(this).parent().attr('data-background') +'") center / cover'});
+            });
+            
+            // Handle click on a contact
+            $('.contact-list__entry').click(function (e) {
+                $('.contact-list__entry').removeClass('contact-list__entry--active');
+                $(this).addClass('contact-list__entry--active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">WebRTCTest</span>
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#tab-call-history" class="mdl-layout__tab">Call history</a>
+                <a href="#tab-contacts" class="mdl-layout__tab is-active">Contacts</a>
+                <a href="#tab-settings" class="mdl-layout__tab">Settings</a>
+
+            </div>
+        </header>
+
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel" id="tab-call-history">
+                <div class="page-content">
+                    <div class="mdl-grid">
+
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <div class="mdl-card mdl-shadow--2dp history-card" data-background="img/leodj.jpg">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Leandro Späth</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    A moment ago, call lasted about 2 minutes
+                                </div>
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">phone</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">videocam</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">chat</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <div class="mdl-card mdl-shadow--2dp history-card" data-background="img/endi.jpg">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Endrit Callaki</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    A moment ago, call lasted about 2 minutes
+                                </div>
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">phone</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">videocam</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">chat</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <div class="mdl-card mdl-shadow--2dp history-card" data-background="img/marvinm.jpg">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Marvin Menzerath</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    A moment ago, call lasted about 2 minutes
+                                </div>
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">phone</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">videocam</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">chat</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <div class="mdl-card mdl-shadow--2dp history-card" data-background="img/th3f.jpg">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Rafael Arkenau</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    A moment ago, call lasted about 2 minutes
+                                </div>
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">phone</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">videocam</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">chat</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <div class="mdl-card mdl-shadow--2dp history-card" data-background="img/grumpy.png">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Thomas Lange</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    A moment ago, call lasted about 2 minutes
+                                </div>
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">phone</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">videocam</i>
+                                    </button>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">chat</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel is-active" id="tab-contacts">
+                <div class="page-content">
+                    <div class="mdl-grid mdl-grid--no-spacing">
+
+                        <div class="mdl-cell mdl-cell--4-col mdl-shadow--4dp contact-cell">
+                            <div class="textfield-margin-wrapper">
+                                <div class="mdl-textfield mdl-textfield--full-width mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="contact_search">
+                                    <label class="mdl-textfield__label" for="contact_search">
+                                        <i class="material-icons">search</i>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <ul class="contact-list">
+
+                                <li class="contact-list__entry contact-list__entry--active cf">
+
+                                    <div class="contact-list__image contact-list__image--round">
+                                        <img src="img/endi.jpg">
+                                    </div>
+                                    <div class="contact-list__border-bottom-wrapper cf">
+                                        <div class="contact-list__main">
+                                            <div class="contact-list__name">Endrit Callaki</div>
+                                            <div class="contact-list__last-message">Hi</div>
+                                        </div>
+                                        <div class="contact-list__additional">
+                                            <div class="contact-list__last-message">17:35</div>
+                                            <div class="contact-list__actions">
+                                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                    <i class="material-icons">phone</i>
+                                                </button>
+                                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                    <i class="material-icons">videocam</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li class="contact-list__entry cf">
+                                    <div class="contact-list__image contact-list__image--round">
+                                        <img src="img/leodj.jpg">
+                                    </div>
+                                    <div class="contact-list__border-bottom-wrapper cf">
+                                        <div class="contact-list__main">
+                                            <div class="contact-list__name">Leandro Späth</div>
+                                            <div class="contact-list__last-message">Hi</div>
+                                        </div>
+                                        <div class="contact-list__additional">
+                                            <div class="contact-list__last-message">17:24</div>
+                                            <div class="contact-list__actions">
+                                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                    <i class="material-icons">phone</i>
+                                                </button>
+                                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                    <i class="material-icons">videocam</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone" id="chat-view">
+
+                            <div class="message-card">
+                                <div class="message-card__avatar">
+                                    <img src="img/endi.jpg" class="mdl-shadow--2dp">
+                                </div>
+                                <div class="mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Endrit Callaki</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Hallo Patrick!
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="message-card">
+                                <div class="message-card__avatar">
+                                    <img src="img/endi.jpg" class="mdl-shadow--2dp">
+                                </div>
+                                <div class="mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Endrit Callaki</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Hallo Patrick!
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="message-card">
+                                <div class="message-card__avatar">
+                                    <img src="img/endi.jpg" class="mdl-shadow--2dp">
+                                </div>
+                                <div class="mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Endrit Callaki</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Hallo Patrick!
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="tab-settings">
+                <div class="page-content"><!-- Your content goes here --></div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
