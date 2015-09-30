@@ -116,7 +116,9 @@ html,body
 
 .contact-cell
 {
-    position: relative;;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 5;
 }
 
 /* Text field margin wrapper to give the text field its margin without affecting the component */
@@ -155,6 +157,8 @@ html,body
     justify-content: flex-end;
     align-items: flex-start;*/
     overflow: auto;
+    position: relative;
+    margin-bottom: 64px;
 }
 
 /* Message cards */
@@ -165,6 +169,14 @@ html,body
     display: flex;
     flex-direction: row;
     align-items: stretch;
+
+    width: 90%;
+}
+
+.message-card--own
+{
+    float: right;
+    flex-direction: row-reverse;
 }
 
 .message-card .mdl-card
@@ -206,8 +218,49 @@ html,body
 
 }
 
+.message-card--own .message-card__avatar
+{
+    margin-right: 0;
+    margin-left: 16px;
+}
+
 .message-card__avatar img
 {
     height: 48px;
     border-radius: 50%;
+}
+
+/* Message input */
+
+.input-bar
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+
+    height: 64px;
+
+    background-color: #ffffff;
+}
+
+.input-bar .textfield-margin-wrapper
+{
+    width: 90%;
+}
+
+.input-bar .input-bar__message-area
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.input-bar__send-button
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

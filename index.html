@@ -28,6 +28,17 @@
                 $('.contact-list__entry').removeClass('contact-list__entry--active');
                 $(this).addClass('contact-list__entry--active');
             });
+
+            $('#message-text').on('keyup', function (e) {
+                if($(this).val() == '')
+                {
+                    $('#send-button').prop('disabled', true);
+                }
+                else
+                {
+                    $('#send-button').prop('disabled', false);
+                }
+            })
         });
     </script>
 </head>
@@ -242,38 +253,47 @@
                                     </div>
                                     <div class="mdl-card__supporting-text">
                                         Hallo Patrick!
-                                        <br>
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="message-card">
+                            <div class="message-card message-card--own">
                                 <div class="message-card__avatar">
-                                    <img src="img/endi.jpg" class="mdl-shadow--2dp">
+                                    <img src="img/patrick246.jpg" class="mdl-shadow--2dp">
                                 </div>
                                 <div class="mdl-card mdl-shadow--2dp">
                                     <div class="mdl-card__title">
-                                        <h2 class="mdl-card__title-text">Endrit Callaki</h2>
+                                        <h2 class="mdl-card__title-text">Patrick Hahn</h2>
                                     </div>
                                     <div class="mdl-card__supporting-text">
-                                        Hallo Patrick!
-                                        <br>
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                        Hi Endrit
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="message-card">
-                                <div class="message-card__avatar">
-                                    <img src="img/endi.jpg" class="mdl-shadow--2dp">
+
+
+                        </div>
+                        <div class="input-bar mdl-shadow--2dp">
+                            <div class="mdl-grid mdl-grid--no-spacing">
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <!-- empty -->
                                 </div>
-                                <div class="mdl-card mdl-shadow--2dp">
-                                    <div class="mdl-card__title">
-                                        <h2 class="mdl-card__title-text">Endrit Callaki</h2>
-                                    </div>
-                                    <div class="mdl-card__supporting-text">
-                                        Hallo Patrick!
+                                <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone">
+                                    <div class="input-bar__message-area">
+                                        <div class="textfield-margin-wrapper">
+                                            <div class="mdl-textfield mdl-textfield--full-width mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" id="message-text">
+                                                <label class="mdl-textfield__label" for="message-text">Message...</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-bar__send-button">
+                                            <button class="mdl-button mdl-js-button mdl-button--icon" id="send-button" disabled>
+                                                <i class="material-icons">send</i>
+                                            </button>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>

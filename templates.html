@@ -1,0 +1,60 @@
+<!-- Here are some templates -->
+
+<div class="mdl-cell mdl-cell--2-col">
+    <div class="mdl-card mdl-shadow--2dp history-card" data-background="[[AVATAR_PATH]]">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">[[NAME]]</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            [[CALL_INFO]]
+        </div>
+        <div class="mdl-card__actions">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">phone</i>
+            </button>
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">videocam</i>
+            </button>
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">chat</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<li class="contact-list__entry contact-list__entry--active cf">
+    <div class="contact-list__image contact-list__image--round">
+        <img src="[[AVATAR_PATH]]">
+    </div>
+    <div class="contact-list__border-bottom-wrapper cf">
+        <div class="contact-list__main">
+            <div class="contact-list__name">[[NAME]]</div>
+            <div class="contact-list__last-message">[[LAST_MESSAGE]]</div>
+        </div>
+        <div class="contact-list__additional">
+            <div class="contact-list__last-message">[[LAST_TIME]]</div>
+            <div class="contact-list__actions">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">phone</i>
+                </button>
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">videocam</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</li>
+
+<div class="message-card">
+    <div class="message-card__avatar">
+        <img src="[[AVATAR_PATH]]" class="mdl-shadow--2dp">
+    </div>
+    <div class="mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">[[NAME]]</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            [[MESSAGE]]
+        </div>
+    </div>
+</div>
